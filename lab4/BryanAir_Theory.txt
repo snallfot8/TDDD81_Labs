@@ -1,0 +1,29 @@
+#Theory questions Bryan Air
+#call addReservation @departure_airport_code='AXE', @arrival_airport_code='HEJ', @year = 2010, @week=2, @day = 'Monday', @temp_time='09:00:00', @number_of_passengers=10;
+8 a)
+We could encrypt the password through hashing before we store it in the database
+
+8 b)
+ 1. It is more secure to do calculations and handle logic on the server since it is harder for users to get access to the back-end/server.
+ 2. The server can be interacted with by many different front-end languages and the server can then be used by more people.
+ 3. Procedure calls are faster and more efficient, providing greater performance.
+ 
+ 
+ 9. b)
+ No, the reservation was not visible in terminal B when it was executed from terminal A.
+ 
+ 9. c) 
+  I can't modify the reservation since I don't have access to it from terminal B.
+  
+  
+  10.a) An overbooking did not occure due to the transaction isolation level.
+  
+  b) If we allow both clients to enter the IF statement before we do write operations, it is possible to get an overbooking
+  
+  c) We implemented 5 seconds of sleep, and we got an overbooking which is expected from the theory in b)
+  
+ d) We used WRITE blocks so that we make sure that the other sessions do not alter flight or payment until the first transaction is finished and we unlock the tables. This also works with the SLEEP from 10c)
+ 
+ 
+ SECONDARY INDEX: If we for example want to get information about a specific passenger on a flight, passport_number for passenger would be a good secondary index for a quick access. 
+	If we sort the index data file, we can perform a binary search to retrieve the primary index, which point to the correct data file block where we can find the person. 
