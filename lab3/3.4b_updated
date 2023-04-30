@@ -1,0 +1,25 @@
+Group 10:
+erisn497
+jakni322
+axeni664
+
+R(A,B,C,D,E)
+
+FD1: (A,B,C) => (D,E)
+FD2: (B,C,D) => (A,E)
+FD3: (C) => (D) (not in bcnf)
+
+Decomposing R into R1 and R2:
+
+R1 = (C,D), FD1: (C) => (D), ck = C (BCNF)
+R2 = (A,B,C,E), FD2: (A,B,C) => (E) (BCNF)
+
+Augmentation on FD3 with (B,C) =>
+FD4: (B,C) => (B,C,D) 
+
+Transistivity of FD2 and F4:
+(B,C) => (B,C,D) and (B,C,D) => (A,E) means that (B,C) => (A,E) (FD5)
+
+R2 has FDs FD2 and FD5:
+(A, B, C) => (E),    (B, C)=> (A, E), ck = (B,C)
+
